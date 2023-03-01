@@ -9,10 +9,9 @@ package mx.itson.jam.nucleo.execepciones;
  *
  * @author medin
  */
-public class ImpuestoException extends Exception{
+public class CapacidadException extends Exception{
     
-    public ImpuestoException(String errorMessage){
+    public CapacidadException(String errorMessage){
         super(errorMessage);
     }
-    
 }

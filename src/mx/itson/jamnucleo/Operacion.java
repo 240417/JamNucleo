@@ -5,7 +5,8 @@
  */
 package mx.itson.jamnucleo;
 
-import mx.itson.jam.nucleo.execepciones.ImpuestoException;
+import java.util.List;
+import mx.itson.jam.nucleo.execepciones.*;
 
 /**
  *
@@ -22,5 +23,20 @@ public class Operacion {
         }
         
         return(importe * (tasaIVA/100));
+    }
+    
+    public int sumaNumeros(List<Integer> num) throws CapacidadException {
+        if(num.isEmpty()){
+            throw new CapacidadException("La lista esta vacia");
+        }
+        if(num.size()>10){
+            throw new CapacidadException("La lista no puede ser mayor a 10 numeros");
+        }
+        int resultado = 0;
+        for(int a =0 ; a< num.size(); a++){
+        resultado += num.get(a);
+        }
+        
+        return(resultado);
     }
 }
